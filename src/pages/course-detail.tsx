@@ -85,6 +85,13 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
             </>
           )}
 
+          {course.duration && (
+            <>
+            <h3>Duration</h3>
+            <p {...(course.$?.duration as {})}>{ course.duration }</p>
+            </>
+          )} 
+
           {course.body && (
             <>
             <h3>Description</h3>

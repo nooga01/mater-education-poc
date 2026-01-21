@@ -22,7 +22,7 @@ export default function NewsSectionComponent({news:newsSection}: {news:NewsSecti
 
 
               {news.url && (
-                <p><Link to={news.url} className='blogpost-readmore'>
+                <p><Link to={news.url} className='newssection-readmore'>
                   {'Read More -->'}
                 </Link></p>
               )}

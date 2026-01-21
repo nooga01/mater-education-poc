@@ -8,6 +8,12 @@ export type FooterRes = {
   navigation: {
     link: Link[];
   };
+  phone: {
+    phone_share: {
+      icon: Img;
+      number: string;
+    }
+  };
   social: {
     social_share: {
       icon: Img;

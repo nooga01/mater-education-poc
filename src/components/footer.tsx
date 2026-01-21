@@ -46,6 +46,16 @@ export default function Footer({ footer, navMenu }: {footer: FooterRes, navMenu:
           </div>
         </div>
         <div className='col-quarter social-link'>
+          { footer.phone?.phone_share && (
+            <div className='phone'>
+              <img
+                  { ...footer.phone?.phone_share.icon.$?.url as {}}
+                  src={ footer.phone.phone_share.icon.url }
+                  alt='phone number'
+                  />
+              { footer.phone?.phone_share.number }
+            </div>
+          )}
           <div className='social-nav'>
             {Object.keys(footer).length ? (
               footer.social.social_share?.map((social) => (

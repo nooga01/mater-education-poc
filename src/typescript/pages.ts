@@ -95,6 +95,7 @@ export type CourseDetailRes = {
   seo: SEO;
   uid: string;
   course_code: string;
+  duration: string;
   body: string;
   blurb: string;
   featured_image: Img;

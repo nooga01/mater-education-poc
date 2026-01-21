@@ -18,7 +18,7 @@ function CourseList({ courselist }: {courselist: CourseDetailRes}) {
         {courselist.blurb && <p {...courselist.$?.blurb as {}}>{courselist.blurb}</p>}
 
         {courselist.url && (
-          <Link to={courselist.url} className='blogpost-readmore'>
+          <Link to={courselist.url} className='coursesection-readmore'>
             {'Read More -->'}
           </Link>
         )}

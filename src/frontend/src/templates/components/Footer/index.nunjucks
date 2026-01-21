@@ -60,21 +60,13 @@
 		</div>	
 	  </div>
 	  <div class="col-quarter social-link">
+		<div class="phone">
+			<img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltbc1d2b8c6b0f4862/6942152cc5a6dd82c6beee92/facebook.svg" alt="" />1300 000 000
+		</div>
 		 <div class="social-nav">
-			<a href="https://facebook.com" title="Facebook"
-			   ><img
-				  src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltbc1d2b8c6b0f4862/6942152cc5a6dd82c6beee92/facebook.svg"
-				  alt="social icon" /></a
-			><a href="https://twitter.com" title="Twitter"
-			   ><img
-				  src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt2bd5deffe9ae82c8/69421534664991780bf681a7/Twitter.svg"
-				  alt="social icon" /></a
-			><a href="https://www.instagram.com/" title="Instagram"
-			   ><img
-				  src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blte5f0bacbc5eca9a0/6942152fc04f9c65ff45878e/Instagram.svg"
-				  alt="social icon"
-			/></a>
-		 </div>
+			<a href="https://www.linkedin.com/school/mater-education" title="Linkedin"><img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blta712707cbf8bdded/696ec44da092f4e537cd5f45/linkedin-svgrepo-com.svg" alt="social icon"></a>
+			<a href="https://www.youtube.com/playlist?list=PL0jT2N3aEf7uF0iQfilxDr6RwFXNXFRFp" title="YouTube"><img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt17da69893c1bc5bb/696ec44d596f03175dc26b06/youtube-svgrepo-com.svg" alt="social icon"></a>
+			<a href="https://facebook.com" title="Facebook"><img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt27c29d8598d6a809/696ec44d2e942b498a271edf/facebook-svgrepo-com.svg" alt="social icon"></a>		 </div>
 	  </div>
    </div>
    <div class="copyright">

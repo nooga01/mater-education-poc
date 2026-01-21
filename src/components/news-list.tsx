@@ -19,7 +19,7 @@ function NewsList({ newslist }: {newslist: NewsArticleRes}) {
         {newslist.title && <h3 {...newslist.$?.title as {}}>{newslist.title}</h3>}
 
         {newslist.url && (
-          <p><Link to={newslist.url} className='blogpost-readmore'>
+          <p><Link to={newslist.url} className='newssection-readmore'>
             {'Read More -->'}
           </Link></p>
         )}

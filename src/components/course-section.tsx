@@ -20,7 +20,7 @@ export default function CourseSectionComponent({news:courseSection}: {news:Cours
               {course.blurb && <p {...course.$?.blurb as {}}>{course.blurb}</p>}
 
               {course.url && (
-                <Link to={course.url} className='blogpost-readmore'>
+                <Link to={course.url} className='coursesection-readmore'>
                   {'Read More -->'}
                 </Link>
               )}
