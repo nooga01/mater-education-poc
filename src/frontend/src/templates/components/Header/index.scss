@@ -12,7 +12,7 @@ header {
 		flex: 0 0 170px;
 		margin: 20px 0;
 		img {
-			width: 130px;
+			width: 194px;
 		}
 	}
 	nav {
@@ -21,17 +21,14 @@ header {
 	}
 
 	.corporatemenu {
-		background: #e1e1e1;
 		padding-right: 120px;
 		padding-top: 10px;
-		padding-bottom: 10px;
 		ul {
 			li {
-				padding-top: 5px;
-				padding-bottom: 0px;
-
+				padding: 5px 35px 0px 0px;
 				a {
 					font-weight: normal;
+					font-size: 14px;
 				}
 			}
 		}
@@ -54,6 +51,14 @@ header {
 	overflow: hidden;
 	.hamburger-icon {
 		display: none;
+	}
+
+	li {
+		a {
+			font-weight: 600;
+			font-size: 16px;
+			color: #173274;
+		}
 	}
 }
 header nav li a:hover,

@@ -9,21 +9,6 @@ export default function Footer({ footer, navMenu }: {footer: FooterRes, navMenu:
   return (
     <footer>
       <div className='max-width footer-div'>
-        <div className='col-quarter footer-logo'>
-          <Link to='/'>
-            {footer.logo ? (
-              <img
-                {...footer.logo.$?.url as {}}
-                src={footer.logo.url}
-                alt='contentstack logo'
-                title='contentstack'
-                className='logo footer-logo'
-              />
-            ) : (
-              <Skeleton width={100} />
-            )}
-          </Link>
-        </div>
         <div className='col-half'>
           <div className='columns'>
             <nav>
