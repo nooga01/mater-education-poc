@@ -1,0 +1,16 @@
+{% macro render(item) %}
+
+    {% for link in item.links %}
+        <a href="{{ link.url }}">
+            <div>
+                {% if link.title %}
+                    <h4>{{ link.title }}</h4>
+                {% endif %}
+                {% if link.body %}
+                    <div>{{ link.body| safe }}</div>
+                {% endif %}
+            </div>
+        </a>
+    {% endfor %}
+
+{% endmacro %}

@@ -1,0 +1,15 @@
+
+/* News */
+
+.news-container {
+  display: flex;
+  flex-wrap: wrap;
+
+  .news-column-left {
+    width: 1090px;
+  }
+
+  .news-column-right {
+    width: 360px;
+  }  
+}

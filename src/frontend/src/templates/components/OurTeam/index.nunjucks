@@ -1,0 +1,21 @@
+{% macro render(item) %}
+
+<div class="about-team-section">
+   <div class="team-head-section">
+      <h2>{{item.title_h2}}</h2>
+      {{item.description | safe }}
+   </div>
+   <div class="team-content">
+      {% for emp in item.employees %}
+         <div class="team-details">
+            <img alt="{{ emp.imagealt }}" src="{{ emp.imagesrc }}" />
+            <div class="team-details">
+               <h4>{{emp.name}}</h4>
+               {{emp.designation | safe }}
+            </div>
+         </div>
+      {% endfor %}  
+   </div>
+</div>
+
+{% endmacro %}

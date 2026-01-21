@@ -1,0 +1,46 @@
+.community-section {
+  text-align: center;
+}
+
+.community-head {
+  padding: 19px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.NewsSection-featured {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.featured-blog {
+  width: 526px;
+  border: #f7f5f5 solid;
+  margin: 4px 33px;
+
+  img {
+    object-fit: cover;
+    inline-size: max-content;
+  }
+}
+
+.featured-content {
+  padding: 16px;
+
+  > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+}
+
+.blogpost-readmore {
+  color: #715cdd;
+}

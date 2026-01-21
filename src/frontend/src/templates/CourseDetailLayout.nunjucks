@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+  <div>
+    {% block structure_course_banner %}{% endblock %}
+  </div>
+
+  <div class="course-container">
+    {% block structure_course_detail %}{% endblock %}
+    <div class='course-column-right'>
+      <div class="related-courses">
+        <h2>Related Courses</h2>      
+        {% block structure_course_column_right %}{% endblock %}
+      </div> 
+    </div>
+  </div>
+
+{% endblock %}

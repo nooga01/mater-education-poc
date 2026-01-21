@@ -1,0 +1,8 @@
+
+{% macro render(item) %}
+
+<div class="page-banner">
+    <h1>{{item.banner_title}}</h1>
+</div>
+
+{% endmacro %}

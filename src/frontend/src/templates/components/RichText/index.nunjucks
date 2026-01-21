@@ -1,0 +1,15 @@
+
+{% macro render(item) %}
+
+    <!-- START : Rich Text Component //-->
+    <div class="rich-text">
+        {% if item.title_h2 %}
+            <h2>{{item.title_h2}}</h2>
+        {% endif %}
+        {% if item.content %}
+            {{ item.content | safe }}
+        {% endif %}
+    </div> 
+    <!-- END : Rich Text Component //-->
+
+{% endmacro %}

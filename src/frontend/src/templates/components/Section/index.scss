@@ -1,0 +1,13 @@
+.home-advisor-section {
+  background: #fff;
+  display: flex;
+  justify-content: space-evenly;
+  text-align: center;
+  margin: 63px;
+  flex-wrap: wrap;
+
+  img {
+    max-width: 540px;
+    max-height: 429px;
+  }
+}

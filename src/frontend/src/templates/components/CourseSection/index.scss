@@ -1,0 +1,59 @@
+.CourseSection {
+  text-align: center;
+}
+
+.CourseSection-head {
+  padding: 19px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.CourseSection-featured {
+  display: flex;
+  padding: 20px;
+  justify-content: center;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+.CourseSection-featured-card {
+  width: 320px;
+  border: #f7f5f5 solid;
+  margin: 4px 15px;
+
+  img {
+    height: 210px;    
+    object-fit: cover;
+    inline-size: max-content;
+  }
+}
+
+.CourseSection-featured-content {
+  padding: 16px;
+
+  > p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    /* number of lines to show */
+    -webkit-box-orient: vertical;
+  }
+
+  h3 {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  .category {
+    display: block;
+    padding-top: 10px;
+    font-weight: bold;
+    color: #00a791;
+  }
+}
+
+.coursesection-readmore {
+  color: #715cdd;
+}

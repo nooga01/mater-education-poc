@@ -1,0 +1,14 @@
+{% macro render(item) %}
+
+   <div class="blog-page-banner" style="background: rgb({{item.bg_colour.r}}, {{item.bg_colour.g}}, {{item.bg_colour.b}})">
+      <div class="blog-page-content">
+         {% if item.banner_title %}
+            <h1 class="hero-title">{{ item.banner_title }}</h1>
+          {% endif %}
+          {% if item.description %}
+            <p class="hero-description">{{ item.description }}</p>
+         {% endif %}
+      </div>
+   </div>
+
+{% endmacro %}

@@ -1,0 +1,19 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+  <div>
+    {% block structure_blog_banner %}{% endblock %}
+  </div>
+
+  <div class="blog-container">
+    {% block structure_blog_detail %}{% endblock %}
+    <div class='blog-column-right'>
+      <div class="related-post">
+        <h2>Related Post</h2>      
+        {% block structure_blog_column_right %}{% endblock %}
+      </div>
+    </div>
+  </div>
+
+{% endblock %}

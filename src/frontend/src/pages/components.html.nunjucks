@@ -1,0 +1,171 @@
+{% import "../templates/components/Section/index.nunjucks" as Section %}
+{% import "../templates/components/HeroBanner/index.nunjucks" as HeroBanner %}
+{% import "../templates/components/SectionWithCards/index.nunjucks" as SectionWithCards %}
+{% import "../templates/components/SectionWithBuckets/index.nunjucks" as SectionWithBuckets %}
+{% import "../templates/components/FromBlog/index.nunjucks" as FromBlog %}
+{% import "../templates/components/OurTeam/index.nunjucks" as OurTeam %}
+{% import "../templates/components/PageBanner/index.nunjucks" as PageBanner %}
+{% import "../templates/components/RichText/index.nunjucks" as RichText %}
+
+{% set pageTitle = 'Homepage' %}
+{# {% set bodyClass = 'homepage' %} #}
+{% set bodyClass = 'home-page' %}
+
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+    {{PageBanner.render({
+        banner_title: 'Page Banner'
+    })}}
+
+    {{RichText.render({
+        title_h2: 'Rich Text',
+        content: '<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in ligula risus. Ut quis malesuada elit, vel dignissim quam. Proin consectetur cursus nulla vitae eleifend. Sed eu placerat ipsum, posuere lobortis odio. Praesent facilisis semper cursus. Nam orci elit, elementum ut tellus in, egestas bibendum erat. Duis feugiat at enim sit amet eleifend. Etiam viverra diam ut turpis mollis tincidunt. Sed sit amet ipsum at sapien tincidunt pretium. Aliquam erat volutpat. Morbi feugiat in sem quis placerat. Nulla at mauris eget justo molestie euismod.</p><p>Mauris non orci posuere, bibendum elit sed, consectetur nulla. Curabitur congue lorem neque, id consequat lorem pellentesque at. Fusce ut elit non mauris dapibus lacinia vel et quam. Phasellus eleifend lacus sed maximus rhoncus. Proin ut lorem efficitur, efficitur turpis sed, hendrerit sapien. Nam et efficitur purus. Curabitur sed mauris est. Quisque id tortor nisi. Vivamus turpis nisl, finibus et varius ut, bibendum vitae nisi. Ut eu dolor et arcu finibus congue. Quisque sit amet turpis sed enim pharetra faucibus ut at felis.</p>'
+    })}}    
+
+    {{Section.render({
+        title_h2: 'Section',
+        description: 'Mater Education is committed to building an exceptional healthcare workforce through excellence and expertise in education. Best-practice health and community care is at the heart of everything we do, and it’s through our hands-on and immersive education that we deliver real-world impacts in healthcare.',
+        imagesrc: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt831fee3e21d60e2b/69421535c3a5a12703972fba/help-for-the-next-step.svg',
+        imagealt: 'help-for-the-next-step.svg',
+        cta: {
+            title: 'Find out more',
+            url: '/'
+        }
+    })}}
+    
+    {{HeroBanner.render({
+        banner_title: 'Hero Banner',
+        banner_description: 'We help you create an agile digital strategy that helps you stand out and win customers. Nothing less.',
+        imagesrc: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt0608eee0b67bd6a0/69421534c39ccd6aaf7964f9/winning-digital-strategy.svg',
+        imagealt: 'winning-digital-strategy.svg',        
+        bg_colour: {r: '113', g: '92', b: '221'}, 
+        text_colour: {r: '255', g: '255', b: '255'},
+        cta: {
+            title: 'Read more',
+            url: '/'
+        }
+    })}}
+
+    {{SectionWithCards.render({
+        cards: [
+            {
+                title_h3: 'Section With Cards',
+                description: 'Get a customized platform walk through for your stack.',
+                cta: {
+                    title: 'Schedule a Demo',
+                    url: '/'
+                }
+            },
+            {
+                title_h3: 'Start a Free Trial',
+                description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vel lorem morbi nulla quis sed diam sed.',
+                cta: {
+                    title: 'Start Free Trial',
+                    url: '/'
+                }
+            }
+        ] 
+    })}}
+
+    {{SectionWithBuckets.render({
+        title_h2 : 'Section With Buckets',
+        description: 'We lead you throughout your digital transformation',
+        bucket_tabular: false,
+        cards: [
+            {
+                title_h3: 'Artificial Intelligence',
+                description: 'Make every interaction with your customers more intelligent than ever.',
+                icon: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt544799e92aa6c7e8/69421532ab8b1084e4e32cc0/artificial-intelligence.svg',
+                iconalt: 'bucket icon',
+                cta: {
+                    title: 'Start Now',
+                    url: '/'
+                }
+            },
+            {
+                title_h3: 'Cloud Computing',
+                description: 'Set up a modular infrastructure that is built to last but makes it easy for your business to evolve.',
+                icon: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt0db0fcfc6c120b2d/6942152bf6eeacee0bb30581/cloud-computing.svg',
+                iconalt: 'bucket icon',
+                cta: {
+                    title: 'Rollover your 401k',
+                    url: '/'
+                }
+            },
+            {
+                title_h3: 'Security',
+                description: 'Protect your business from the deadliest threats of today and tomorrow.',
+                icon: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt65833f224c50395b/6942153565d14974f03734fe/security.svg',
+                iconalt: 'bucket icon',
+                cta: {
+                    title: 'Learn More',
+                    url: '/'
+                }
+            }            
+        ] 
+    })}}
+
+    {{FromBlog.render({
+        title_h2 : 'From Blog',
+        view_articles: {
+            title: 'View Articles',
+            url: ''
+        },
+        featured_blogs: [
+            {
+                title_h3: 'The modern Cloud Ecosystem',
+                description: 'The hardware and software infrastructures of various companies have continuously transformed digitally over the years. There has been a massive migration from "on-premise" systems to cloud deployments. Cloud computing has spurred the technologically advancing industries and continues to be.',
+                imagesrc: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltd33be900ea93aa50/69421537e15bc14cd0d4f844/modern-cloud-ecosystem.svg',
+                imagealt: 'modern-cloud-ecosystem.svg',
+                cta: {
+                    title: 'Read More',
+                    url: '/'
+                }
+            },
+            {
+                title_h3: 'The future of business with AI',
+                description: 'Intelligence is not a skill itself, its not what you can do, its how well and how efficiently you can learn new things. Artificial intelligence (AI) is advancing out of research labs and into the business world. Its power is being harnessed by leading companies across numerous.',
+                imagesrc: 'https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt06f6768be088b504/6942153dc5a6dd7478beee98/business-with-al.svg',
+                imagealt: 'business-with-al.svg',
+                cta: {
+                    title: 'Rollover your 401k',
+                    url: '/'
+                }
+            }          
+        ] 
+    })}}
+
+    {{OurTeam.render({
+        title_h2: 'Our Team',
+        description: 'Meet our executive leadership team who, through their relentless hard work, vision, and drive, have helped build SampleStack into what it is today.',
+        employees: [
+            {
+                name: 'Cierra Vega',
+                designation: 'Founder and CEO',
+                imagesrc: 'https://images.contentstack.io/v3/assets/blt3f2ad18c8465b7b5/bltda9d862a116e3509/629705b092ff2178a4784997/cierra-vega.svg',
+                imagealt: 'cierra-vega.svg'
+            },
+            {
+                name: 'Alden Cantrell',
+                designation: 'Founder, CEO, and CTO',
+                imagesrc: 'https://images.contentstack.io/v3/assets/blt3f2ad18c8465b7b5/blt58d6d0305e57994a/629705c1c93f1775fd54dc06/alden-cantrell.svg',
+                imagealt: 'alden-cantrell.svg'
+            },
+            {
+                name: 'Pierre Cox',
+                designation: 'Founder, CMO, and COO',
+                imagesrc: 'https://images.contentstack.io/v3/assets/blt3f2ad18c8465b7b5/blt20dbe60d493ba1f0/629705beeae5f5763b7c25d9/pierre-cox.svg',
+                imagealt: 'pierre-cox.svg'
+            },
+            {
+                name: 'Thomas Crane',
+                designation: 'CFO',
+                imagesrc: 'https://images.contentstack.io/v3/assets/blt3f2ad18c8465b7b5/blte98a78e89fac2d0b/629705b6ca1aa871c32d86a3/thomas-crane.svg',
+                imagealt: 'thomas-crane.svg'
+            }      
+        ] 
+    })}}
+
+{% endblock %}

@@ -1,0 +1,30 @@
+{% macro render(item) %}
+
+    {% for blog in item.blogs %}
+        <div class="blog-list">
+            <a href="{{ blog.url }}">
+                <img class="blog-list-img" src="{{ blog.imageurl }}" alt="{{ blog.imagealt }}"/>
+            </a>
+            <div class="blog-content">
+                {% if blog.title %}
+                    <a href="{{blog.url}}"><h3>{{blog.title}}</h3></a>
+                {% endif %}
+                <p>
+                    {% if blog.date %}
+                        {{ blog.date }}, 
+                    {% endif %}
+                    {% if blog.author %}
+                        <strong>{{ blog.author }}</strong>
+                    {% endif %}
+                </p>
+                {% if blog.body %}
+                    {{ blog.body | safe }}
+                {% endif %}
+                <a href="{{blog.url}}">
+                    <span>Read more --&gt;</span>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endmacro %}

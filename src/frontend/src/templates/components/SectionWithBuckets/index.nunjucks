@@ -1,0 +1,30 @@
+{% macro render(item) %}
+
+<div class="member-main-section">
+   <div class="member-head">
+      <h2>{{item.title_h2}}</h2>
+      <p>{{item.description}}</p>
+   </div>
+   <div class="member-section">
+      {% for card in item.cards %}
+         <div class="content-section">
+            <img src="{{card.icon}}" alt="{{card.iconalt}}" />
+            {% if card.title_h3 %}
+               <h3>{{card.title_h3}}</h3>
+            {% endif %}
+            {% if card.description %}
+               <div>
+                  <p>{{card.description}}</p>
+               </div>
+            {% endif %}
+            {% if card.cta.title %}
+               <div class="card-cta">
+                  <a href="{{card.cta.url}}">{{card.cta.title}} --&gt;</a>
+               </div>
+            {% endif %}
+         </div>
+      {% endfor %} 
+   </div>
+</div>
+
+{% endmacro %}

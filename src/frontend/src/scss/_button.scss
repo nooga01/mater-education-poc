@@ -1,0 +1,76 @@
+.btn {
+  border: none;
+  font-size: 14px;
+  line-height: 18px;
+  border-radius: 2px;
+  letter-spacing: 0.3px;
+  padding: 12px 28px;
+}
+
+.primary-btn {
+  border-radius: 20px;
+  background: #00a791;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+
+  &:hover {
+    background: #00a791;
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.secondary-btn {
+  border: 2px solid #1f509e;
+  border-radius: 20px;
+  color: #1f509e;
+
+  &:hover {
+    color: #1f509e;
+    font-weight: bold;
+  }
+}
+
+
+.tertiary-btn {
+  background: #ffffff;
+  color: #715cdd;
+  font-weight: bold;
+
+  &:hover {
+    color: #5c49be;
+  }
+}
+
+.filter-btn {
+  border: 2px solid #1f509e;
+  border-radius: 20px;
+  color: #1f509e;
+  margin-left: 10px;
+  margin-right: 10px;
+
+  &:hover {
+    color: #1f509e;
+    font-weight: bold;
+  }
+}
+
+
+.btn-close {
+  width: 0.6rem;
+  height: 0.6rem;
+  padding: 0 0.5rem !important;
+}
+
+.modal-btn {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 135%;
+  color: #647696;
+
+  &:hover {
+    color: #222222;
+  }
+}

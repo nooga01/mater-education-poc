@@ -1,0 +1,17 @@
+
+/* Course */
+
+.course-container {
+  text-align: center;
+
+  .course-filter {
+    padding-top: 20px;
+  }
+
+  .course-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+

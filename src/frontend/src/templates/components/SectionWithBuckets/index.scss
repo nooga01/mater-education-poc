@@ -1,0 +1,36 @@
+.member-main-section {
+  background: #f7f7f7;
+  margin: auto;
+  padding: 34px;
+}
+
+.member-head {
+  text-align: center;
+}
+
+.member-section {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 27px;
+  text-align: center;
+  margin-top: 43px;
+}
+
+.content-section {
+  width: 350px;
+
+  img {
+    max-width: 405px;
+    max-height: 201px;
+  }
+
+  h3 {
+    padding-top: 5px;
+  }
+
+  a {
+    font-weight: bold;
+    color: #715cdd;    
+  }
+}

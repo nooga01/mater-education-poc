@@ -1,0 +1,21 @@
+{% macro render(item) %}
+
+<div class="demo-section">
+   {% for card in item.cards %}
+      <div class="cards">
+         {% if card.title_h3 %}
+            <h3>{{card.title_h3}}</h3>
+         {% endif %}
+         {% if card.description %}
+            <p>{{card.description}}</p>
+         {% endif %}
+         {% if card.cta.title %}
+            <div class="card-cta">
+               <a class="btn primary-btn" href="{{card.cta.url}}">{{card.cta.title}}</a>
+            </div>
+         {% endif %}
+      </div>
+   {% endfor %}   
+</div>
+
+{% endmacro %}

@@ -1,0 +1,83 @@
+<footer>
+   <div class="max-width footer-div">
+	  <div class="col-quarter footer-logo">
+		 <a href="/">
+		 	<img
+			   src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltd36e88c94207c5b3/69421539e15bc13410d4f84a/company-logo.svg" alt="contentstack logo" title="contentstack" class="logo footer-logo" />
+		 </a>
+	  </div>
+	  <div class="col-half">
+		<div class="columns">
+			<nav>
+				<ul class="nav-ul">
+				<li class="footer-nav-li">
+					<a aria-current="page" class="active" href="/">Home</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/about-us">About Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/blog">Blog</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>
+				<li class="footer-nav-li">
+					<a class="" href="/contact-us">Contact Us</a>
+				</li>			   			   			   			   			   			   			   			   			   
+				</ul>
+			</nav>
+		</div>	
+	  </div>
+	  <div class="col-quarter social-link">
+		 <div class="social-nav">
+			<a href="https://facebook.com" title="Facebook"
+			   ><img
+				  src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltbc1d2b8c6b0f4862/6942152cc5a6dd82c6beee92/facebook.svg"
+				  alt="social icon" /></a
+			><a href="https://twitter.com" title="Twitter"
+			   ><img
+				  src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt2bd5deffe9ae82c8/69421534664991780bf681a7/Twitter.svg"
+				  alt="social icon" /></a
+			><a href="https://www.instagram.com/" title="Instagram"
+			   ><img
+				  src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blte5f0bacbc5eca9a0/6942152fc04f9c65ff45878e/Instagram.svg"
+				  alt="social icon"
+			/></a>
+		 </div>
+	  </div>
+   </div>
+   <div class="copyright">
+	  <p>Copyright © 2024. LogoIpsum. All rights reserved.</p>
+   </div>
+</footer>

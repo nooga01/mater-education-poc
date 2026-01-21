@@ -1,0 +1,18 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+  <div>
+    {% block structure_blog_banner %}{% endblock %}
+  </div>
+
+  <div class="blog-container">
+    <div class="blog-column-left">
+  		{% block structure_blog_column_left %}{% endblock %}
+    </div>
+    <div class="blog-column-right">
+      {% block structure_blog_column_right %}{% endblock %}
+    </div>
+  </div>
+
+{% endblock %}

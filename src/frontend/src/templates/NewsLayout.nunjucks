@@ -1,0 +1,18 @@
+{% extends "layout.nunjucks" %}
+
+{% block content %}
+
+  <div>
+    {% block structure_news_banner %}{% endblock %}
+  </div>
+
+  <div class="news-container">
+    <div class="news-column-left">
+  		{% block structure_news_column_left %}{% endblock %}
+    </div>
+    <div class="news-column-right">
+      {% block structure_news_column_right %}{% endblock %}
+    </div>
+  </div>
+
+{% endblock %}

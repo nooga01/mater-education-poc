@@ -1,0 +1,71 @@
+@use "sass:math";
+
+@import 'config/mixins';
+//@import 'config/foundation-settings';
+@import 'config/variables';
+@import 'config/layers';
+
+//@import 'node_modules/foundation-sites/scss/foundation';
+//@import 'node_modules/foundation-sites/scss/util/mixins';
+
+//@include foundation-global-styles;
+//@include foundation-table;
+//@include foundation-typography;
+//@include foundation-float-classes;
+//@include foundation-flex-classes;
+//@include foundation-xy-grid-classes;
+//@include foundation-forms;
+//@include foundation-visibility-classes;
+//@include foundation-button;
+//@include foundation-responsive-embed;
+
+
+/* 
+Begin Styles
+*/
+//@import 'icons/style';
+//@import 'font-includes';
+@import 'root';
+@import 'json-preview';
+@import 'tool-tip';
+@import 'typography';
+@import 'global';
+@import 'blog'; // NEW COMPONENT
+@import 'news'; // NEW COMPONENT
+@import 'news-article'; // NEW COMPONENT
+@import 'course'; // NEW COMPONENT
+@import 'course-detail'; // NEW COMPONENT
+@import 'button';
+
+//@import 'grid';
+//@import 'forms';
+//@import 'table';
+//@import 'slickslider';
+//@import 'structure-tabs-templates';
+//@import 'video-modal';
+//@import 'loaderAni';
+
+@import '../templates/components/Header/index';
+@import '../templates/components/Footer/index';
+@import '../templates/components/Section/index';
+@import '../templates/components/SectionWithCards/index';
+@import '../templates/components/SectionWithBuckets/index';
+@import '../templates/components/FromBlog/index';
+@import '../templates/components/OurTeam/index';
+@import '../templates/components/HeroBanner/index';
+@import '../templates/components/BlogBanner/index';
+@import '../templates/components/BlogList/index';
+@import '../templates/components/BlogPost/index';
+@import '../templates/components/PageBanner/index'; // NEW COMPONENT
+@import '../templates/components/RichText/index'; // NEW COMPONENT
+@import '../templates/components/NewsBanner/index'; // NEW COMPONENT
+@import '../templates/components/NewsList/index'; // NEW COMPONENT
+@import '../templates/components/NewsArticle/index'; // NEW COMPONENT
+@import '../templates/components/NewsSection/index'; // NEW COMPONENT
+@import '../templates/components/CourseBanner/index'; // NEW COMPONENT
+@import '../templates/components/CourseDetail/index'; // NEW COMPONENT
+@import '../templates/components/CourseSection/index'; // NEW COMPONENT
+// /* 
+// Print Style Overrides
+// */
+// @import 'print';

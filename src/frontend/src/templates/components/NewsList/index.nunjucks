@@ -1,0 +1,30 @@
+{% macro render(item) %}
+
+    {% for article in item.articles %}
+        <div class="news-list">
+            <a href="{{ article.url }}">
+                <img class="news-list-img" src="{{ article.imageurl }}" alt="{{ article.imagealt }}"/>
+            </a>
+            <div class="news-content">
+                {% if article.title %}
+                    <a href="{{article.url}}"><h3>{{article.title}}</h3></a>
+                {% endif %}
+                <p>
+                    {% if article.date %}
+                        {{ article.date }}, 
+                    {% endif %}
+                    {% if article.author %}
+                        <strong>{{ article.author }}</strong>
+                    {% endif %}
+                </p>
+                {% if article.body %}
+                    {{ article.body | safe }}
+                {% endif %}
+                <a href="{{article.url}}">
+                    <span>Read more --&gt;</span>
+                </a>
+            </div>
+        </div>
+    {% endfor %}
+
+{% endmacro %}

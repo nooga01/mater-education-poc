@@ -1,0 +1,48 @@
+<header class="header">
+   <div class="note-div">
+	  <p>To Our Community: Please read this important update.</p>
+   </div>
+	<div>
+	  <nav class="corporatemenu">
+		 <ul class="nav-ul header-ul">
+			<li class="nav-li">
+			   <a class="" href="/">Student information</a>
+			</li>
+			<li class="nav-li">
+			   <a class="" href="/">News and events</a>
+			</li>
+			<li class="nav-li">
+			   <a class="" href="/">Contact us</a>
+			</li>
+		 </ul>
+	  </nav>
+	</div>
+   <div class="max-width header-div">
+	  <div class="wrapper-logo">
+		 <a title="Contentstack" href="/">
+		 	<img class="logo" src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltd36e88c94207c5b3/69421539e15bc13410d4f84a/company-logo.svg" alt="company-logo.svg" />
+		</a>
+	  </div>
+	  <input class="menu-btn" type="checkbox" id="menu-btn" />
+	  <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+	  <nav class="menu">
+		 <ul class="nav-ul header-ul">
+			<li class="nav-li">
+			   <a aria-current="page" class="active active" href="/">Home</a>
+			</li>
+			<li class="nav-li">
+			   <a class="" href="/">About Us</a>
+			</li>
+			<li class="nav-li">
+			   <a class="" href="/">Career pathways</a>
+			</li>
+			<li class="nav-li">
+			   <a class="" href="/">Development pathways</a>
+			</li>
+			<li class="nav-li">
+			   <a class="" href="/">Course finder</a>
+			</li>
+		 </ul>
+	  </nav>
+   </div>
+</header>

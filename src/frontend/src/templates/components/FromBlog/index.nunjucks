@@ -1,0 +1,36 @@
+{% macro render(item) %}
+
+<div class="community-section">
+   <div class="community-head">
+      {% if item.title_h2 %}
+         <h2>{{item.title_h2}}</h2>
+      {% endif %}
+      {% if item.view_articles.title %}    
+         <a class="btn secondary-btn article-btn" href="{{item.view_articles.url}}">{{item.view_articles.title}}</a>
+      {% endif %}
+   </div>
+   <div class="home-featured-blogs">
+      {% for blog in item.featured_blogs %}
+         <div class="featured-blog">
+            {% if blog.imagesrc %}
+               <img src="{{blog.imagesrc}}" alt="{{blog.imagealt}}" class="blog-post-img"/>
+            {% endif %}
+            <div class="featured-content">
+               {% if blog.title_h3 %}
+                  <h3>{{blog.title_h3}}</h3>
+               {% endif %}
+               {% if blog.description %}
+               <div>
+                  <p>{{blog.description}}</p>
+               </div>
+               {% endif %}
+               {% if blog.cta.title %}
+                  <a class="blogpost-readmore" href="{{blog.cta.url}}">{{blog.cta.title}} --&gt;</a>
+               {% endif %}
+            </div>
+         </div>
+      {% endfor %} 
+   </div>
+</div>
+
+{% endmacro %}
