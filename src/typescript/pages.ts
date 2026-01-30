@@ -11,6 +11,8 @@ import {
   RichText,
   NewsSection,
   CourseSection,
+
+  CourseInformation,
 } from "./components";
 
 export type SEO = {
@@ -49,6 +51,11 @@ export type ComponentsProps = {
   news_section: NewsSection;
   course_section: CourseSection;
 };
+
+export type CourseComponentsProps = {
+  information: CourseInformation;
+};
+
 export type Page = {
   $: Page;
   title: string;
@@ -101,6 +108,10 @@ export type CourseDetailRes = {
   featured_image: Img;
   locale: string;
   is_archived: boolean;
+  page_components: CourseComponentsProps[];
+  page_components_2: {
+    details: CourseInformation;
+  }
   taxonomies: [{ $: { taxonomy_uid: string; term_uid: string }; taxonomy_uid: string; term_uid: string }];
   $: CourseDetailRes;
 };

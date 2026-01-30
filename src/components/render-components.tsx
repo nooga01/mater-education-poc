@@ -42,11 +42,6 @@ export default function RenderComponents({ pageComponents, blogsPage, contentTyp
             <NewsBanner
               news_banner={component.hero_banner}
               key={`component-${key}`}
-            />           
-          ) : coursePage ? (
-            <CourseBanner
-              course_banner={component.hero_banner}
-              key={`component-${key}`}
             />
           ) : (
             <HeroBanner

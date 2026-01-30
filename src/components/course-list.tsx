@@ -11,13 +11,21 @@ function CourseList({ courselist }: {courselist: CourseDetailRes}) {
   return (
     <div className='CourseSection-featured-card'>
       <div className='CourseSection-featured-content'>
-        {courselist.featured_image && <img {...courselist.featured_image.$?.url as {}} src={courselist.featured_image.url} alt='' />}
+        { courselist.featured_image && (
+          <Link to={courselist.url} >
+            <img {...courselist.featured_image.$?.url as {}} src={courselist.featured_image.url} alt='' />
+          </Link>
+        )}
 
-        {courselist.title && <h3 {...courselist.$?.title as {}}>{courselist.title}</h3>}
+        { courselist.title && (
+          <Link to={courselist.url} >
+            <h3 {...courselist.$?.title as {}}>{courselist.title}</h3>
+          </Link>
+        )}
 
         {courselist.blurb && <p {...courselist.$?.blurb as {}}>{courselist.blurb}</p>}
 
-        {courselist.url && (
+        { courselist.url && (
           <Link to={courselist.url} className='coursesection-readmore'>
             {'Read More -->'}
           </Link>

@@ -174,3 +174,10 @@ export type CourseSection = {
     featured_image: Img;
   }[];
 };
+
+export type CourseInformation = {
+  $:CourseInformation
+  duration: string;
+  cost: [ $: { title: string, cost: string }]
+  upcoming_dates: [ $: { dates: string, location: string }]
+};

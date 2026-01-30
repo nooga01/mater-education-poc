@@ -13,13 +13,22 @@ export default function CourseSectionComponent({news:courseSection}: {news:Cours
         {courseSection.featured_courses.map((course) => (
           <div className='CourseSection-featured-card' key={course.title}>
            <div className='CourseSection-featured-content'>
-              {course.featured_image && <img {...course.featured_image.$?.url as {}} src={course.featured_image.url} alt='' />}
+              
+              { course.featured_image && (
+                <Link to={course.url}>
+                  <img {...course.featured_image.$?.url as {}} src={course.featured_image.url} alt='' />
+                </Link>
+              )}
 
-              {course.title && <h3 {...course.$?.title as {}}>{course.title}</h3>}
+              { course.title && (
+                <Link to={course.url}>
+                  <h3 {...course.$?.title as {}}>{course.title}</h3>
+                </Link>
+              )}
 
-              {course.blurb && <p {...course.$?.blurb as {}}>{course.blurb}</p>}
+              { course.blurb && <p {...course.$?.blurb as {}}>{course.blurb}</p> }
 
-              {course.url && (
+              { course.url && (
                 <Link to={course.url} className='coursesection-readmore'>
                   {'Read More -->'}
                 </Link>

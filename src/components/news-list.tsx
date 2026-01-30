@@ -16,12 +16,17 @@ function NewsList({ newslist }: {newslist: NewsArticleRes}) {
 
         <span className='category'>News</span>
         {newslist.date && <i {...newslist.$?.date as {}}>{moment(newslist.date).format('D MMM')}</i>}              
-        {newslist.title && <h3 {...newslist.$?.title as {}}>{newslist.title}</h3>}
+
+        { newslist.title && (
+          <Link to={newslist.url}>
+            <h3 {...newslist.$?.title as {}}>{newslist.title}</h3>
+          </Link>
+        )}
 
         {newslist.url && (
-          <p><Link to={newslist.url} className='newssection-readmore'>
+          <Link to={newslist.url} className='newssection-readmore'>
             {'Read More -->'}
-          </Link></p>
+          </Link>
         )}
       </div>
     </div>

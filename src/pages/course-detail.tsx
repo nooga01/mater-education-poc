@@ -10,6 +10,8 @@ import Skeleton from "react-loading-skeleton";
 import { useLivePreviewCtx } from "../context/live-preview-context-provider";
 import { CourseDetailRes, Page } from "../typescript/pages";
 import { EntryProps } from "../typescript/components";
+import CourseInformation from "../components/course-information";
+import CourseBanner from "../components/course-banner";
 
 export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=> void}) {
   const lpTs = useLivePreviewCtx();
@@ -45,28 +47,12 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
 
   return (
     <>
-      {banner ? (
-        <RenderComponents
-          pageComponents={banner.page_components}
-          coursePage
-          contentTypeUid='course'
-          entryUid={banner.uid}
-          locale={banner.locale}
-        />
-      ) : (
-        <Skeleton height={400} />
-      )}
+      <CourseBanner 
+        courseTitle={ course.title }
+        courseCode={ course.course_code }
+      />
 
       <div className='course-detail-container'>
-
-          {course.title ? (
-            <h1 {...(course.$?.title as {})}>{course.title}</h1>
-          ) : (
-            <h1>
-              <Skeleton />
-            </h1>
-          )}
-
           {course.course_code ? (
             <i {...(course.$?.course_code as {})}>{course.course_code}</i>
           ) : (
@@ -85,12 +71,16 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
             </>
           )}
 
-          {course.duration && (
-            <>
-            <h3>Duration</h3>
-            <p {...(course.$?.duration as {})}>{ course.duration }</p>
-            </>
-          )} 
+          {course.page_components?.map((component, key: number) => {
+            if (component.information) {
+              return (
+                <CourseInformation
+                  information= {component.information }
+                  key={`component-${key}`}
+                />
+              );
+            }
+          })}
 
           {course.body && (
             <>
