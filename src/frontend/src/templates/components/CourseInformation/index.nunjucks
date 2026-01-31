@@ -1,34 +1,68 @@
 {% macro render(item) %}
-COURSE INFORMATION
 
 <div class="course-infomation-table">
-  <div class="table-row-group"> <!-- Optional: for tbody, thead -->
-    <div class="table-row">
-      <div class="table-cell"></div>
-      <div class="table-cell"><h4>Cost</h4></div>
-      <div class="table-cell"></div>
+    <div class="table-row-group">
+        <div class="table-row">
+            <div class="table-cell">
+                <img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltd9bc17eff4dccb0e/697d858105a38babdd7b7a9a/clock.svg">
+            </div>
+            <div class="table-cell"><h2>Duration</h2></div>
+            <div class="table-cell"></div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell">18 months</div>
+            <div class="table-cell"></div>
+        </div>
     </div>
-    <div class="table-row">
-      <div class="table-cell"></div>
-      <div class="table-cell">Free Nursing</div>
-      <div class="table-cell"><b>$0</b></div>
+    <div class="table-row-group">
+        <div class="table-row">
+            <div class="table-cell">
+                <img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/bltf1bc092d2dbd9a51/697d8581774b80e8688f8c39/dollar-circle.svg">
+            </div>
+            <div class="table-cell"><h2>Cost</h2></div>
+            <div class="table-cell"></div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell">Free Nursing</div>
+            <div class="table-cell"><b>$0</b></div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell">Career Boost non-concessional students</div>
+            <div class="table-cell"><b>$10,000</b></div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell">Career Boost concessional students</div>
+            <div class="table-cell"><b>$15,000</b></div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell">Full fee</div>
+            <div class="table-cell"><b>$25,000</b></div>
+        </div>
     </div>
-    <div class="table-row">
-      <div class="table-cell"></div>
-      <div class="table-cell">Career Boost non-concessional students</div>
-      <div class="table-cell"><b>$14,927</b></div>
+    <div class="table-row-group">
+        <div class="table-row">
+            <div class="table-cell">
+                <img src="https://images.contentstack.io/v3/assets/blt453905795f62a7e6/blt354c2474204027e9/697d8581774b80893c8f8c37/calendar-alt.svg">
+            </div>
+            <div class="table-cell"><h2>Upcoming dates</h2></div>
+            <div class="table-cell"></div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell"><b>April 2026 - Apply now</b></div>
+            <div class="table-cell">Melbourne</div>
+        </div>
+        <div class="table-row">
+            <div class="table-cell"></div>
+            <div class="table-cell"><b>July 2026 - Enquire now</b></div>
+            <div class="table-cell">Sydney</div>
+        </div>
     </div>
-    <div class="table-row">
-      <div class="table-cell"></div>
-      <div class="table-cell">Career Boost concessional students</div>
-      <div class="table-cell"><b>$12,768</b></div>
-    </div>
-    <div class="table-row">
-      <div class="table-cell"></div>
-      <div class="table-cell">Full fee</div>
-      <div class="table-cell"><b>$25,000</b></div>
-    </div>       
-  </div>
 </div>
 
 {% endmacro %}
