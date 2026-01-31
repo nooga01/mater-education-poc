@@ -1,14 +1,11 @@
 {% macro render(item) %}
-
-   <div class="course-page-banner" style="background: rgb({{item.bg_colour.r}}, {{item.bg_colour.g}}, {{item.bg_colour.b}})">
-      <div class="course-page-content">
-         {% if item.banner_title %}
-            <h1 class="hero-title">{{ item.banner_title }}</h1>
+   <div class="course-banner">
+         {% if item.course_title %}
+            <h1 class="hero-title">{{ item.course_title }}</h1>
           {% endif %}
-          {% if item.description %}
-            <p class="hero-description">{{ item.description }}</p>
+          {% if item.course_code %}
+            <h4>{{ item.course_code }}</h4>
          {% endif %}
-      </div>
    </div>
 
 {% endmacro %}

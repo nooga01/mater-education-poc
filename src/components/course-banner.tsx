@@ -8,7 +8,7 @@ interface CourseBannerProps {
 export default function CourseBanner({ courseTitle, courseCode }: CourseBannerProps) {
 
   return (
-    <div className='page-banner'>
+    <div className='course-banner'>
         { courseTitle && (
           <h1 {...courseTitle as {}} className='hero-title'>
             {courseTitle}

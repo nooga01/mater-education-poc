@@ -53,14 +53,8 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
       />
 
       <div className='course-detail-container'>
-          {course.course_code ? (
-            <i {...(course.$?.course_code as {})}>{course.course_code}</i>
-          ) : (
-              <Skeleton />
-          )}
-
-
-          {locations?.length > 0 && (
+        <div className='course-detail-column-left'>
+          {locations?.length > 999 && (
             <>
             <h3>Locations</h3>
             <ul>
@@ -71,6 +65,13 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
             </>
           )}
 
+          {course.body && (
+            <>
+            <div {...(course.$?.body as {})}>{parse(course.body)}</div>
+            </>
+          )}          
+        </div>
+        <div className='course-detail-column-right'>
           {course.page_components?.map((component, key: number) => {
             if (component.information) {
               return (
@@ -81,13 +82,7 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
               );
             }
           })}
-
-          {course.body && (
-            <>
-            <h3>Description</h3>
-            <div {...(course.$?.body as {})}>{parse(course.body)}</div>
-            </>
-          )}
+        </div>
       </div>
     </>
   );

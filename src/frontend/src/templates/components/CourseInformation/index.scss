@@ -1,0 +1,30 @@
+
+.course-infomation-table {
+    background-color: #1f509e;
+    color: #fff;
+    padding: 5px;
+    border-radius: 15px;
+
+    display: table;
+    //width: 50%; /* Optional: Adjust width as needed */
+
+
+    .table-row-group {
+        display: table-row-group; /* Corresponds to <tbody> */
+    }  
+
+    .table-row {
+        display: table-row; /* Corresponds to <tr> */
+
+        .table-cell {
+            display: table-cell; /* Corresponds to <td> or <th> */
+            padding: 8px 5px 5px 8px;
+            vertical-align: top; /* Optional: adjust vertical alignment */
+
+            img {
+                width: 35px;
+                height: 35px;
+            }
+        }
+    }
+}

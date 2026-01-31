@@ -3,4 +3,13 @@
 
 .course-detail-container {
   padding: 20px 63px 20px 63px;
+  display: flex;
+}
+
+.course-detail-column-left {
+  width: 690px;
+  padding-right: 35px;
+}
+
+.course-detail-column-right {
 }
