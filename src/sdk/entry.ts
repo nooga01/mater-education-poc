@@ -24,6 +24,8 @@ const {
   REACT_APP_CONTENTSTACK_API_HOST,
   REACT_APP_CONTENTSTACK_API_KEY,
   REACT_APP_CONTENTSTACK_APP_HOST,
+  REACT_APP_CONTENTSTACK_ENVIRONMENT,
+  REACT_APP_CONTENTSTACK_LIVE_PREVIEW,
 } = process.env;
 
 const customHostBaseUrl = REACT_APP_CONTENTSTACK_API_HOST? customHostUrl(
@@ -41,7 +43,14 @@ if (customHostBaseUrl && isValidCustomHostUrl(customHostBaseUrl)) {
 // Setting LP if enabled
 ContentstackLivePreview.init({
   //@ts-ignore
+  ssr: false,
+  enable: REACT_APP_CONTENTSTACK_LIVE_PREVIEW === 'true',
+  mode: "builder",
   stackSdk: Stack,
+  stackDetails : {
+    apiKey: REACT_APP_CONTENTSTACK_API_KEY,
+    environment: REACT_APP_CONTENTSTACK_ENVIRONMENT,
+  },
   clientUrlParams:{
     host: REACT_APP_CONTENTSTACK_APP_HOST
   }
