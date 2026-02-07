@@ -49,7 +49,7 @@ ContentstackLivePreview.init({
   stackSdk: Stack,
   stackDetails : {
     apiKey: REACT_APP_CONTENTSTACK_API_KEY,
-    environment: REACT_APP_CONTENTSTACK_ENVIRONMENT,
+    environment: "preview",
   },
   clientUrlParams:{
     host: REACT_APP_CONTENTSTACK_APP_HOST
