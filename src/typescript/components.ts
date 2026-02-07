@@ -70,6 +70,9 @@ export type SectionWithCards = {
       call_to_action: Link;
     };
   }[];
+  $?: {
+    title_h2?: Record<string, any>;
+  };  
 };
 
 export type OurTeam = {

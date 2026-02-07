@@ -7,7 +7,9 @@ export default function CardSection({ section }: {section: SectionWithCards}) {
   return (
     <div className='SectionWithCards'>
 
-      {section.title_h2 && <h2 {...section.title_h2 as {}}>{ section.title_h2 }</h2>}
+      <h2 {...section.$?.title_h2}>
+        {section.title_h2}
+      </h2>
       
       <div className='demo-section'>
         {section.cards?.map((card) => (
