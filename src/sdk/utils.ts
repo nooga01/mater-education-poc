@@ -60,9 +60,12 @@ export const initializeContentStackSdk = (): Stack => {
     region: setRegion(),
     branch: REACT_APP_CONTENTSTACK_BRANCH || "main",
   };
+  console.log('here1');
   if (REACT_APP_CONTENTSTACK_LIVE_PREVIEW === "true") {
+    console.log('here2  '+ REACT_APP_CONTENTSTACK_LIVE_PREVIEW);
     stackConfig.live_preview = setLivePreviewConfig();
   }
+  console.log(stackConfig);
   return Stack(stackConfig);
 };
 // api host url
