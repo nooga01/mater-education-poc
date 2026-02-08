@@ -16,7 +16,12 @@ export type Section = {
   description: string;
   call_to_action: Link;
   image_alignment: string;
-  $: Section;
+  $: {
+    title_h2: string;
+    description: string;
+    call_to_action: Link;
+    image_alignment: string;
+  };
 };
 
 export type Buckets = {
@@ -70,9 +75,9 @@ export type SectionWithCards = {
       call_to_action: Link;
     };
   }[];
-  $?: {
-    title_h2?: Record<string, any>;
-  };  
+  $: {
+    title_h2: string;
+  };
 };
 
 export type OurTeam = {

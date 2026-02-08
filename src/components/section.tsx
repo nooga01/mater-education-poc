@@ -7,10 +7,21 @@ export default function Section({ section }: {section : SectionProp}) {
   function contentSection() {
     return (
       <div className='home-content' key='section-1'>
-        {section.title_h2 && <h2 {...section.$?.title_h2 as {}}>{section.title_h2}</h2>}
-        {section.description && <p {...section.$?.description as {}}>{section.description}</p>}
-        {section.call_to_action.title && section.call_to_action.href ? (
-          <Link {...section.call_to_action.$?.title as {}} to={section.call_to_action.href} className='btn secondary-btn'>
+
+        { section?.title_h2 ? (
+          <h2 {...section.$ && section?.$.title_h2 as {}}>
+            { section?.title_h2 }
+          </h2>
+        ) : null }  
+
+        {section?.description ? (
+          <p {...section.$ && section?.$.description as {}}>
+            { section.description }
+          </p>
+        ) : null }
+
+        {section?.call_to_action.title && section?.call_to_action.href ? (
+          <Link {...section.$.call_to_action.$?.title as {}} to={section.$.call_to_action.href} className='btn secondary-btn'>
             {section.call_to_action.title}
           </Link>
         ) : (
