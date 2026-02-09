@@ -184,8 +184,24 @@ export type CourseSection = {
 };
 
 export type CourseInformation = {
-  $:CourseInformation
   duration: string;
-  cost: [ $: { title: string, cost: string }]
-  upcoming_dates: [ $: { dates: string, location: string }]
+  cost: {
+    title: string;
+    cost: string;
+    $: {
+      title: string;
+      cost: string;
+    };
+  }[];
+  upcoming_dates: {
+    dates: string;
+    location: string;
+    $: {
+      dates: string;
+      location: string;
+    };
+  }[];
+  $: {
+    duration: string;
+  };  
 };

@@ -16,7 +16,11 @@ export default function CourseInformation({ information }: {information:CourseIn
             </div>
               <div className="table-row">
                 <div className="table-cell"></div>
-                <div className="table-cell">{ information.duration }</div>
+                { information?.duration ? (
+                  <div className="table-cell" {...information.$ && information?.$.duration as {}}>
+                    { information?.duration }
+                  </div>
+                ) : <div/> }
                 <div className="table-cell"></div>
               </div>            
           </div>
@@ -33,8 +37,16 @@ export default function CourseInformation({ information }: {information:CourseIn
             information?.cost.map((c) => (
               <div className="table-row" key={c.title}>
                 <div className="table-cell"></div>
-                <div className="table-cell">{ c.title }</div>
-                <div className="table-cell"><b>{ c.cost }</b></div>
+                { c?.title ? (
+                  <div className="table-cell" {...c.$ && c?.$.title as {}}>
+                    { c?.title }
+                  </div>
+                ) : <div/> }
+                { c?.cost ? (
+                  <div className="table-cell" {...c.$ && c?.$.cost as {}}>
+                    <b>{ c?.cost }</b>
+                  </div>
+                ) : <div/> }                
               </div>
             ))
           }
@@ -54,8 +66,16 @@ export default function CourseInformation({ information }: {information:CourseIn
             information?.upcoming_dates.map((d) => (
               <div className="table-row" key={d.dates}>
                 <div className="table-cell"></div>
-                <div className="table-cell"><b>{ d.dates }</b></div>
-                <div className="table-cell">{ d.location }</div>
+                { d?.dates ? (
+                  <div className="table-cell" {...d.$ && d?.$.dates as {}}>
+                    { d?.dates }
+                  </div>
+                ) : <div/> }                
+                { d?.location ? (
+                  <div className="table-cell" {...d.$ && d?.$.location as {}}>
+                    { d?.location }
+                  </div>
+                ) : <div/> }
               </div>
             ))
           }            

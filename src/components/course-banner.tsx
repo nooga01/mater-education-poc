@@ -1,25 +1,22 @@
 import React from 'react';
+import { CourseDetailRes, Page } from "../typescript/pages";
 
-interface CourseBannerProps {
-  courseTitle: string;
-  courseCode: string;
-}
 
-export default function CourseBanner({ courseTitle, courseCode }: CourseBannerProps) {
+export default function CourseBanner({course}: {course:CourseDetailRes}) {
 
   return (
     <div className='course-banner'>
-        { courseTitle && (
-          <h1 {...courseTitle as {}} className='hero-title'>
-            {courseTitle}
+        { course.title ? (
+          <h1 {...course.$ && course?.$.title as {}} className='hero-title'>
+            { course?.title }
           </h1>
-        )}
+        ): null }
 
-        { courseCode && (
-          <h4 {...courseCode as {}}>
-            { courseCode }
+        { course.course_code ? (
+          <h4 {...course.$ && course?.$.course_code as {}}>
+            { course?.course_code }
           </h4>
-        )}
+        ): null }        
       </div>
   );
 }

@@ -48,8 +48,7 @@ export default function CourseDetail({entry}:{entry:({page, course}:EntryProps)=
   return (
     <>
       <CourseBanner 
-        courseTitle={ course.title }
-        courseCode={ course.course_code }
+        course={ course }
       />
 
       <div className='course-detail-container'>
