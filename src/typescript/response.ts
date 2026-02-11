@@ -12,7 +12,11 @@ export type FooterRes = {
     phone_share: {
       icon: Img;
       number: string;
-    }
+      $: {
+        icon: Img;
+        number: string;
+      }
+    };
   };
   social: {
     social_share: {

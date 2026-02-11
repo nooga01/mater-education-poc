@@ -36,9 +36,13 @@ export default function Footer({ footer, navMenu }: {footer: FooterRes, navMenu:
               <img
                   { ...footer.phone?.phone_share.icon.$?.url as {}}
                   src={ footer.phone.phone_share.icon.url }
-                  alt='phone number'
-                  />
-              { footer.phone?.phone_share.number }
+                  alt='phone number' />
+
+              { footer.phone?.phone_share ? (
+                <span {...footer.phone?.phone_share.$ && footer.phone?.phone_share.$?.number as {}}>
+                  { footer.phone?.phone_share.number }
+                </span>
+              ) : null }
             </div>
           )}
           <div className='social-nav'>
@@ -64,15 +68,11 @@ export default function Footer({ footer, navMenu }: {footer: FooterRes, navMenu:
           </div>
         </div>
       </div>
-      {footer.copyright ? (
-        <div className='copyright' {...footer.$?.copyright as {}}>
-          {parse(footer.copyright)}
+      { footer?.copyright ? (
+        <div className='copyright' {...footer.$ && footer?.$.copyright as {}}>
+          { parse(footer?.copyright) }
         </div>
-      ) : (
-        <div className='copyright'>
-          <Skeleton width={500} />
-        </div>
-      )}
+      ) : null }
     </footer>
   );
 }

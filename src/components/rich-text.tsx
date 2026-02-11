@@ -6,8 +6,18 @@ import { RichText as RichTextProp } from "../typescript/components";
 export default function RichText({rich_text}: {rich_text:RichTextProp}) {
   return (
     <div className="rich-text">
-        {rich_text.title_h2 && <h2 {...rich_text.$?.title_h2 as {}}>{rich_text.title_h2}</h2>}
-        <span dangerouslySetInnerHTML={{__html: rich_text.content}} />
+
+        { rich_text?.title_h2 ? (
+          <h2 {...rich_text.$ && rich_text?.$.title_h2 as {}}>
+            { rich_text?.title_h2 }
+          </h2>
+        ) : null }
+
+        { rich_text?.content ? (
+          <span {...(rich_text.$ && rich_text.$.content as {})}
+            dangerouslySetInnerHTML={{ __html: rich_text.content }}
+          />
+        ) : null }
     </div>
   );
 }

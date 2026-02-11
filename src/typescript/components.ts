@@ -137,7 +137,10 @@ export type PageBanner = {
 export type RichText = {
     title_h2: string;
     content: string;
-    $: RichText;
+    $: {
+      title_h2: string;
+      content: string;
+    };
 };
 
 export type NewsSection = {
